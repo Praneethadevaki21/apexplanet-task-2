@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* Navbar */
+
+.navbar {
+    padding: 15px 0;
+}
+
+
+/* Hero */
+
+.hero-section {
+    min-height: 75vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 0;
+
+    background: linear-gradient(
+        135deg,
+        #eef4ff,
+        #ffffff
+    );
+}
+
+.hero-section h1 {
+    animation: slideLeft 1s ease;
+}
+
+.hero-section p {
+    animation: slideLeft 1.3s ease;
+}
+
+
+/* Welcome Card */
+
+.welcome-card {
+    padding: 50px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.1);
+
+    animation: floating 3s infinite ease-in-out;
+}
+
+.icon-circle {
+    width: 120px;
+    height: 120px;
+
+    margin: 30px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #0d6efd;
+
+    font-size: 50px;
+}
+
+
+/* Features */
+
+.features {
+    background: #f8f9fa;
+}
+
+.feature-card {
+    height: 100%;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Authentication */
+
+.auth-body {
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #eef4ff,
+        #dbeafe
+    );
+}
+
+.auth-container {
+    min-height: calc(100vh - 76px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+}
+
+.auth-card {
+    width: 100%;
+
+    max-width: 450px;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.15);
+
+    animation: fadeIn 0.8s ease;
+}
+
+.auth-card h2 {
+    margin-bottom: 10px;
+}
+
+
+/* Password */
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 70px;
+}
+
+.password-toggle {
+    position: absolute;
+
+    right: 8px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #0d6efd;
+
+    cursor: pointer;
+}
+
+
+/* Animations */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes slideLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        text-align: center;
+
+        padding: 50px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 35px;
+    }
+
+    .welcome-card {
+        padding: 30px;
+    }
+
+    .auth-card {
+        padding: 25px;
+    }
+
+}
